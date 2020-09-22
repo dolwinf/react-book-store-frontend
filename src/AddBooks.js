@@ -56,25 +56,25 @@ function AddBooks() {
   };
   return (
     <div className="container">
-      <form>
+      <form onSubmit={(e) => submitBook(e)}>
         <div className="form-row">
           <div className="form-group col-md-6">
-            <label htmlFor="title">Title</label>
+            <label htmlFor="validationDefault22">Title</label>
             <input
               type="text"
               className="form-control"
-              id="title"
+              id="validationDefault22"
               placeholder="Book Title"
               required
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
           <div className="form-group col-md-6">
-            <label htmlFor="author">Author</label>
+            <label htmlFor="validationDefault22">Author</label>
             <input
               type="text"
               className="form-control"
-              id="author"
+              id="validationDefault22"
               placeholder="Author name"
               required
               onChange={(e) => setAuthor(e.target.value)}
@@ -82,11 +82,11 @@ function AddBooks() {
           </div>
         </div>
         <div className="form-group">
-          <label htmlFor="description">Description</label>
+          <label htmlFor="validationDefault22">Description</label>
           <input
             type="text"
             className="form-control"
-            id="description"
+            id="validationDefault22"
             placeholder="Description"
             required
             onChange={(e) => setDescription(e.target.value)}
@@ -95,12 +95,12 @@ function AddBooks() {
 
         <div className="form-row">
           <div className="form-group col-md-3">
-            <label htmlFor="inputCity">Price</label>
+            <label htmlFor="validationDefault22">Price</label>
             <input
               type="text"
               className="form-control"
-              id="inputCity"
-              placeholder="Amount in USD"
+              id="validationDefault22"
+              placeholder="Eg: 19.99"
               required
               onChange={(e) => setPrice(parseFloat(e.target.value))}
             />
@@ -108,7 +108,7 @@ function AddBooks() {
         </div>
         <div className="input-group">
           <div className="input-group-prepend">
-            <span className="input-group-text" id="inputGroupFileAddon01">
+            <span className="input-group-text" id="validationDefault22">
               Upload
             </span>
           </div>
@@ -116,18 +116,18 @@ function AddBooks() {
             <input
               type="file"
               className="custom-file-input"
-              id="inputGroupFile01"
-              aria-describedby="inputGroupFileAddon01"
+              id="validationDefault22"
+              aria-describedby="validationDefault22"
               required
               onChange={(e) => setImage(e.target.files[0])}
             />
-            <label className="custom-file-label" htmlFor="inputGroupFile01">
+            <label className="custom-file-label" htmlFor="validationDefault22">
               Choose file
             </label>
           </div>
         </div>
         <button
-          onClick={(e) => submitBook(e)}
+          type="submit"
           className="btn btn-primary"
           style={{ marginTop: "20px" }}
         >

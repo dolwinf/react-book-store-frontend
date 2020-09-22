@@ -34,80 +34,78 @@ function EditBook(props) {
   const renderForm = () => {
     return (
       <div className="container">
-        <form>
+        <form onSubmit={(e) => editBook(e)}>
           <h4>Edit Book Details</h4>
           <br />
           <div className="form-row">
             <div className="form-group col-md-6">
-              <label htmlFor="title">Title</label>
+              <label htmlFor="validationDefault22">Title</label>
               <input
                 type="text"
                 className="form-control"
-                id="title"
+                id="validationDefault22"
                 placeholder="Book Title"
                 value={title}
+                required
                 onChange={(e) => setTitle(e.target.value)}
               />
             </div>
             <div className="form-group col-md-6">
-              <label htmlFor="author">Author</label>
+              <label htmlFor="validationDefault22">Author</label>
               <input
                 type="text"
                 className="form-control"
-                id="author"
+                id="validationDefault22"
                 placeholder="Author name"
                 value={author}
+                required
                 onChange={(e) => setAuthor(e.target.value)}
               />
             </div>
           </div>
           <div className="form-group">
-            <label htmlFor="description">Description</label>
+            <label htmlFor="validationDefault22">Description</label>
             <input
               type="text"
               className="form-control"
-              id="description"
+              id="validationDefault22"
               placeholder="Description"
               value={description}
+              required
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
 
           <div className="form-row">
             <div className="form-group col-md-3">
-              <label htmlFor="inputCity">Price</label>
+              <label htmlFor="validationDefault22">Price</label>
               <input
                 type="text"
                 className="form-control"
-                id="inputCity"
+                id="validationDefault22"
                 placeholder="Amount in USD"
                 value={String(price)}
+                required
                 onChange={(e) => setPrice(e.target.value)}
               />
             </div>
           </div>
           <div className="input-group">
             <div className="input-group-prepend">
-              <span className="input-group-text" id="inputGroupFileAddon01">
-                Upload
-              </span>
+              <span className="input-group-text">Upload</span>
             </div>
             <div className="custom-file col-md-3">
               <input
                 type="file"
                 className="custom-file-input"
-                id="inputGroupFile01"
-                aria-describedby="inputGroupFileAddon01"
                 onChange={(e) => setImage(e.target.files[0])}
               />
-              <label className="custom-file-label" htmlFor="inputGroupFile01">
-                Choose file
-              </label>
+              <label className="custom-file-label">Choose file</label>
             </div>
           </div>
 
           <button
-            onClick={(e) => editBook(e)}
+            type="submit"
             className="btn btn-info"
             style={{ marginTop: "20px" }}
           >
