@@ -56,7 +56,7 @@ function AddBooks() {
   };
   return (
     <div className="container">
-      <form onSubmit={(e) => submitBook(e)}>
+      <form onSubmit={(e) => submitBook(e)} style={{ marginTop: "50px" }}>
         <div className="form-row">
           <div className="form-group col-md-6">
             <label htmlFor="validationDefault22">Title</label>
@@ -97,7 +97,7 @@ function AddBooks() {
           <div className="form-group col-md-3">
             <label htmlFor="validationDefault22">Price</label>
             <input
-              type="text"
+              type="number"
               className="form-control"
               id="validationDefault22"
               placeholder="Eg: 19.99"

@@ -4,8 +4,18 @@ import { Link } from "react-router-dom";
 const navBar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link to="" className="navbar-brand">
+      <nav
+        className="navbar navbar-expand-lg navbar-light"
+        style={{ backgroundColor: "#799bf7" }}
+      >
+        <Link
+          to="/"
+          style={{
+            fontFamily: "Lobster, cursive",
+            fontSize: "50px",
+            color: "white",
+          }}
+        >
           Book Attic
         </Link>
         <button
@@ -21,9 +31,17 @@ const navBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item active">
-              <Link to="/Add" className="nav-link">
-                Add Book Listing <span className="sr-only">(current)</span>
+            <li className="nav-item">
+              <Link
+                to="/Add"
+                style={{
+                  marginLeft: "50px",
+                  fontFamily: "Montserrat, sans-serif",
+                  fontSize: "20px",
+                  color: "white",
+                }}
+              >
+                Add Book Listing
               </Link>
             </li>
             {/* <li className="nav-item active">

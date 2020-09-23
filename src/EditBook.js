@@ -80,7 +80,7 @@ function EditBook(props) {
             <div className="form-group col-md-3">
               <label htmlFor="validationDefault22">Price</label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 id="validationDefault22"
                 placeholder="Amount in USD"
