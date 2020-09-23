@@ -98,6 +98,7 @@ function AddBooks() {
             <label htmlFor="validationDefault22">Price</label>
             <input
               type="number"
+              step=".01"
               className="form-control"
               id="validationDefault22"
               placeholder="Eg: 19.99"
